@@ -163,8 +163,8 @@ export async function getCustomers(
         customers = customers.filter(
             (customer) =>
                 customer.name.toLowerCase().includes(lowerQuery) ||
-                customer.email.toLowerCase().includes(lowerQuery) ||
-                customer.phone.includes(lowerQuery)
+                customer.email?.toLowerCase().includes(lowerQuery) ||
+                customer.phone?.includes(lowerQuery)
         );
     }
 
